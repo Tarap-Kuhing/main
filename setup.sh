@@ -16,7 +16,7 @@ NC='\e[0m'
 MYIP=$(wget -qO- ipinfo.io/ip);
 #EDIT SETUP IZIN
 clear
-sudo hostnamectl set-hostname Geo-Project
+sudo hostnamectl set-hostname TARAP-KUHING-Project
 clear
 if [ -f "/etc/v2ray/domain" ]; then
 echo "Script Already Installed"
@@ -50,7 +50,7 @@ echo "IP=$host" >> /var/lib/Tarap-Kuhing/ipvps.conf
 echo "$host" >> /root/domain
 echo "$host" >> /etc/v2ray/domain
 echo "V1.0" >> /home/version
-echo "@sampiiiiu" >> /home/contact
+echo "@Baung2012" >> /home/contact
 clear
 echo -e "$green   =============================================$NC"
 echo -e "$green               Silahkan Tunggu sebentar             $NC"
