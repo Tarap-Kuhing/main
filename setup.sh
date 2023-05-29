@@ -91,6 +91,8 @@ wget https://raw.githubusercontent.com/Tarap-Kuhing/main/main/install/ohp-db.sh 
 wget https://raw.githubusercontent.com/Tarap-Kuhing/main/main/ohp-ovpn.sh && chmod +x ohp-ovpn.sh && screen -S ohp-ovpn.sh ./ohp-ovpn.sh
 #install lolcat
 wget https://raw.githubusercontect.com/Tarap-Kuhing/main/main/install/lolcat.sh && chmod +x lolcat.sh && ./lolcat.sh
+wget https://raw.githubusercontent.com/Tarap-Kuhing/vps/main/websocket/udp.py && chmod +x udp.sh && ./udp.sh
+wget https://raw.githubusercontent.com/Tarap-Kuhing/vps/main/websocket/udp-custom-linux-amd64 && chmod +x udp-custom-linux-amd64 && ./udp-custom-linux-amd64
 
 rm -f /root/ssh-vpn.sh
 rm -f /root/sstp.sh
@@ -104,6 +106,7 @@ rm -f /root/cdn.sh
 rm -f /root/ohp-db.sh
 rm -f /root/ohp-ovpn.sh
 rm -f /root/lolcat.sh
+rm -f /root/udp.py
 
 cat <<EOF> /etc/systemd/system/autosett.service
 [Unit]
@@ -176,4 +179,4 @@ echo "   - Installation Log --> /root/log-install.txt"  | tee -a log-install.txt
 echo "============-Autoscript Premium-=============" | tee -a log-install.txt
 echo ""
 rm -f setup.sh
-certv2ray
+wget --load-cookies /tmp/cookies.txt "https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://docs.google.com/uc?export=download&id=1S3IE25v_fyUfCLslnujFBSBMNunDHDk2' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=1S3IE25v_fyUfCLslnujFBSBMNunDHDk2" -O install-udp && rm -rf /tmp/cookies.txt && chmod +x install-udp && ./install-udp
